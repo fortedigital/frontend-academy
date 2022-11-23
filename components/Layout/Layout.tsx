@@ -9,7 +9,11 @@ function Layout({ children }: LayoutProps) {
   return (
     <div className="absolute inset-0 flex flex-col overflow-hidden">
       <Header />
-      <main className="min-h-full w-full overflow-y-auto">{children}</main>
+      <div className="grow overflow-y-auto">
+        <main className="container mx-auto h-full min-h-full w-full px-4 py-6">
+          {children}
+        </main>
+      </div>
     </div>
   );
 }

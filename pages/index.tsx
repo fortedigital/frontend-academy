@@ -1,18 +1,11 @@
-import Head from "next/head";
 import Link from "next/link";
-import { ArrowRightIcon } from "@heroicons/react/24/solid";
+
 import Icon from "components/Icon";
 
 export default function Home() {
   return (
-    <div className="container mx-auto px-4">
-      <Head>
-        <title>Forte Frontend Academy</title>
-        <meta name="description" content="Hjemmeside for Frontend-akademiet" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <div className="mx-auto mt-72 flex max-w-3xl flex-col items-center">
+    <div className="flex h-full flex-col justify-center">
+      <div className="mx-auto flex max-w-3xl flex-col items-center justify-center">
         <h1 className="mb-20 text-center text-6xl font-bold">
           Velkommen til <br /> Frontend Academy
         </h1>

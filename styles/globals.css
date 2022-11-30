@@ -5,5 +5,5 @@
 @tailwind utilities;
 
 :root {
-  @apply bg-zinc-800 font-roboto text-white;
+  @apply bg-zinc-800 font-roboto text-base text-white;
 }

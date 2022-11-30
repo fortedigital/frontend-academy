@@ -6,10 +6,10 @@ export default function Home() {
   return (
     <div className="flex h-full flex-col justify-center">
       <div className="mx-auto flex max-w-3xl flex-col items-center justify-center">
-        <h1 className="mb-20 text-center text-6xl font-bold">
+        <h1 className="mb-14 text-center text-4xl font-bold md:mb-20 md:text-6xl">
           Velkommen til <br /> Frontend Academy
         </h1>
-        <p className="mb-16 text-center text-lg">
+        <p className="mb-14 text-center md:text-lg">
           Ønsker du å utvikle deg enda mer innenfor frontendteknologier,
           deriblant universell utforming, kvalitet, sikkerhet og
           konsulentvirksomhet? Meld deg på Frontendakademiet der vi utover våren

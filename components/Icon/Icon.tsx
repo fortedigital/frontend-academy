@@ -1,17 +1,17 @@
-import React from "react";
-import clsx from "clsx";
+import React, { SVGAttributes } from "react";
 import dynamic from "next/dynamic";
 import { ComponentType } from "react";
 import { IconName } from "./types";
 
-type IconProps = {
+interface IconProps {
   name: IconName;
-  className?: string;
+  size?: string | number;
   solid?: boolean;
-};
+  className?: string;
+}
 
-function Icon({ name, className, solid = false }: IconProps) {
-  const HeroIcon: ComponentType<{ className?: string }> = solid
+function Icon({ name, size = "1em", solid = false, className }: IconProps) {
+  const HeroIcon: ComponentType<SVGAttributes<SVGElement>> = solid
     ? dynamic(() =>
         import("@heroicons/react/24/outline").then((mod) => mod[name])
       )
@@ -19,7 +19,14 @@ function Icon({ name, className, solid = false }: IconProps) {
         import("@heroicons/react/24/solid").then((mod) => mod[name])
       );
 
-  return <HeroIcon className={clsx("h-4 w-4", className)} aria-hidden={true} />;
+  return (
+    <HeroIcon
+      width={size}
+      height={size}
+      className={className}
+      aria-hidden={true}
+    />
+  );
 }
 
 export default Icon;

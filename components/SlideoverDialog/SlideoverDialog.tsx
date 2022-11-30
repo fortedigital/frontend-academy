@@ -51,7 +51,7 @@ export default function SlideoverDialog({
         >
           <Dialog.Panel
             className={clsx(
-              "pointer-events-auto fixed inset-y-0 z-10 flex max-w-full bg-white shadow-2xl",
+              "pointer-events-auto fixed inset-y-0 z-10 flex max-w-full bg-zinc-800 shadow-2xl",
               anchor === "left" ? "left-0" : "right-0",
               panelClassName
             )}

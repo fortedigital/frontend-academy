@@ -46,14 +46,14 @@ function Header() {
         <Logo />
         <div className="hidden gap-x-8 md:flex">{links}</div>
         <button className="md:hidden" onClick={() => setMenuOpen(true)}>
-          <Icon name="Bars3Icon" className="h-6 w-6" />
+          <Icon name="Bars3Icon" size="1.5em" />
         </button>
       </div>
       <SlideoverDialog
         open={menuOpen}
         onClose={() => setMenuOpen(false)}
         anchor="right"
-        panelClassName="bg-zinc-800 w-56 p-6 flex flex-col gap-y-4"
+        panelClassName="w-56 p-6 flex flex-col gap-y-4"
       >
         {links}
       </SlideoverDialog>

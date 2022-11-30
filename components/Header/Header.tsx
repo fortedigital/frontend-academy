@@ -44,11 +44,14 @@ function Header() {
     <>
       <div className="container mx-auto flex h-20 flex-none items-center justify-between gap-x-8 px-4">
         <Logo />
+        {/*
         <div className="hidden gap-x-8 md:flex">{links}</div>
         <button className="md:hidden" onClick={() => setMenuOpen(true)}>
           <Icon name="Bars3Icon" size="1.5em" />
         </button>
+        */}
       </div>
+      {/* 
       <SlideoverDialog
         open={menuOpen}
         onClose={() => setMenuOpen(false)}
@@ -56,7 +59,8 @@ function Header() {
         panelClassName="w-56 p-6 flex flex-col gap-y-4"
       >
         {links}
-      </SlideoverDialog>
+      </SlideoverDialog> 
+      */}
     </>
   );
 }

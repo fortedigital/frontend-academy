@@ -1,8 +1,11 @@
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router.js";
 import Link from "next/link";
-import React from "react";
 
 import forteLogo from "assets/Forte_Symbol_white.svg";
 import Image from "next/image";
+import Icon from "components/Icon";
+import SlideoverDialog from "components/SlideoverDialog";
 
 interface HeaderLinkProps {
   href: string;
@@ -23,14 +26,38 @@ const Logo = () => (
 );
 
 function Header() {
+  const router = useRouter();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [router.asPath]);
+
+  const links = (
+    <>
+      <HeaderLink href="/pamelding">Påmelding</HeaderLink>
+      <HeaderLink href="/ressurser">Ressurser</HeaderLink>
+    </>
+  );
+
   return (
-    <div className="container mx-auto flex h-20 flex-none items-center justify-between gap-x-8 px-4">
-      <Logo />
-      <div className="flex gap-x-8">
-        <HeaderLink href="/pamelding">Påmelding</HeaderLink>
-        <HeaderLink href="/ressurser">Ressurser</HeaderLink>
+    <>
+      <div className="container mx-auto flex h-20 flex-none items-center justify-between gap-x-8 px-4">
+        <Logo />
+        <div className="hidden gap-x-8 md:flex">{links}</div>
+        <button className="md:hidden" onClick={() => setMenuOpen(true)}>
+          <Icon name="Bars3Icon" className="h-6 w-6" />
+        </button>
       </div>
-    </div>
+      <SlideoverDialog
+        open={menuOpen}
+        onClose={() => setMenuOpen(false)}
+        anchor="right"
+        panelClassName="bg-zinc-800 w-56 p-6 flex flex-col gap-y-4"
+      >
+        {links}
+      </SlideoverDialog>
+    </>
   );
 }
 

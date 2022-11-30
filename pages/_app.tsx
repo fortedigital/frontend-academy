@@ -9,7 +9,10 @@ export default function App({ Component, pageProps }: AppProps) {
     <Layout>
       <Head>
         <title>Forte Frontend Academy</title>
-        <meta name="description" content="Hjemmeside for Frontend-akademiet" />
+        <meta
+          name="description"
+          content="Hjemmeside for Forte Frontend Academy"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />

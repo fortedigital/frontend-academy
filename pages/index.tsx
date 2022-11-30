@@ -1,18 +1,26 @@
 import Icon from "components/Icon";
 
 export default function Home() {
+  const EmphasizedText = ({ children }: { children?: React.ReactNode }) => (
+    <span className="font-bold text-red-300">{children}</span>
+  );
+
   return (
     <div className="flex h-full flex-col justify-center">
-      <div className="mx-auto flex max-w-3xl flex-col items-center justify-center">
-        <h1 className="mb-14 text-center text-4xl font-bold md:mb-20 md:text-6xl">
+      <div className="mx-auto flex max-w-3xl flex-col items-center justify-center gap-y-14">
+        <h1 className="text-center text-4xl font-bold md:text-6xl">
           Velkommen til <br /> Forte Frontend Academy
         </h1>
-        <p className="mb-14 text-center md:text-lg">
+        <p className="text-center md:text-lg">
           Ønsker du å utvikle deg enda mer innenfor frontendteknologier,
-          deriblant universell utforming, kvalitet, sikkerhet og
-          konsulentvirksomhet? Meld deg på Forte Frontend Academy, der vi utover
-          våren arrangerer 8 til 10 ettermiddager med kurs, workshops og
-          gruppeoppgaver.
+          deriblant <EmphasizedText>universell utforming</EmphasizedText>,{" "}
+          <EmphasizedText>kvalitet</EmphasizedText>,{" "}
+          <EmphasizedText>sikkerhet</EmphasizedText> og{" "}
+          <EmphasizedText>konsulentvirksomhet</EmphasizedText>?
+          <br />
+          <br />
+          Meld deg på Forte Frontend Academy, der vi utover våren arrangerer 8
+          til 10 ettermiddager med kurs, workshops og gruppeoppgaver.
         </p>
         <a
           href="https://forms.office.com/Pages/ResponsePage.aspx?id=nv06Bstf0kinacoxsPW0Qyz1_fHV7sxIpo8188t8HX5UOEZHRFRBMEg0S1VERTY4OUtWTzhFRlZIQyQlQCN0PWcu"

@@ -1,4 +1,5 @@
 import Icon from "components/Icon";
+import Button from "components/Button";
 
 export default function Home() {
   const EmphasizedText = ({ children }: { children?: React.ReactNode }) => (
@@ -27,13 +28,19 @@ export default function Home() {
           href="https://forms.office.com/Pages/ResponsePage.aspx?id=nv06Bstf0kinacoxsPW0Qyz1_fHV7sxIpo8188t8HX5UOEZHRFRBMEg0S1VERTY4OUtWTzhFRlZIQyQlQCN0PWcu"
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex h-10 items-center gap-x-2 rounded-sm bg-red-600 pl-3 pr-5 font-bold transition-colors hover:bg-red-700 active:bg-red-800"
         >
-          Meld deg på
-          <Icon
-            name="ArrowRightIcon"
-            className="transition-transform group-hover:translate-x-2"
-          />
+          <Button
+            className="group"
+            icon={
+              <Icon
+                name="ArrowRightIcon"
+                className="transition-transform group-hover:translate-x-2"
+              />
+            }
+            iconPosition="end"
+          >
+            Meld deg på
+          </Button>
         </a>
       </div>
     </div>

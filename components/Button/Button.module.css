@@ -1,0 +1,51 @@
+.ffa-button {
+  @apply flex items-center gap-x-2 rounded-sm px-4 transition-colors duration-100;
+
+  /* Primary */
+  &--primary {
+    @apply bg-red-600 text-white;
+
+    &:hover {
+      @apply bg-red-700;
+    }
+    &:active {
+      @apply bg-red-800;
+    }
+    &:disabled {
+      @apply bg-zinc-300 text-zinc-500;
+    }
+  }
+
+  /* Ghost */
+  &--ghost {
+    @apply bg-transparent text-white;
+
+    &:hover {
+      @apply bg-zinc-600;
+    }
+    &:active {
+      @apply bg-zinc-500;
+    }
+    &:disabled {
+      @apply bg-zinc-300 text-zinc-500;
+    }
+  }
+
+  /* Size */
+  &--large {
+    @apply h-10 font-bold;
+  }
+
+  &--small {
+    @apply h-8 text-sm font-semibold;
+  }
+
+  /* Icon position */
+  &--icon-start {
+    @apply flex-row pl-3 pr-5;
+  }
+
+  &--icon-end {
+    @apply flex-row-reverse pr-5 pl-3;
+  }
+}

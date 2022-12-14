@@ -13,7 +13,10 @@ interface HeaderLinkProps {
 }
 
 const HeaderLink = ({ href, children }: HeaderLinkProps) => (
-  <Link href={href} className="text-lg underline-offset-4 hover:underline">
+  <Link
+    href={href}
+    className="text-lg font-bold underline-offset-4 transition duration-100 hover:text-red-300 hover:underline"
+  >
     {children}
   </Link>
 );
@@ -35,8 +38,9 @@ function Header() {
 
   const links = (
     <>
-      <HeaderLink href="/pamelding">Påmelding</HeaderLink>
-      <HeaderLink href="/ressurser">Ressurser</HeaderLink>
+      <HeaderLink href="/faq">FAQ</HeaderLink>
+      {/* <HeaderLink href="/pamelding">Påmelding</HeaderLink> */}
+      {/* <HeaderLink href="/ressurser">Ressurser</HeaderLink> */}
     </>
   );
 
@@ -44,14 +48,13 @@ function Header() {
     <>
       <div className="container mx-auto flex h-20 flex-none items-center justify-between gap-x-8 px-4">
         <Logo />
-        {/*
+
         <div className="hidden gap-x-8 md:flex">{links}</div>
         <button className="md:hidden" onClick={() => setMenuOpen(true)}>
           <Icon name="Bars3Icon" size="1.5em" />
         </button>
-        */}
       </div>
-      {/* 
+
       <SlideoverDialog
         open={menuOpen}
         onClose={() => setMenuOpen(false)}
@@ -59,8 +62,7 @@ function Header() {
         panelClassName="w-56 p-6 flex flex-col gap-y-4"
       >
         {links}
-      </SlideoverDialog> 
-      */}
+      </SlideoverDialog>
     </>
   );
 }

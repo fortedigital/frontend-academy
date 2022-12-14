@@ -39,7 +39,7 @@ const QABlock = ({ item }: { item: QA }) => (
 export default function FAQ() {
   return (
     <div>
-      <Link href="/">
+      <Link href="/" className="block max-w-fit">
         <Button
           variant="ghost"
           icon={<Icon name="ArrowLeftIcon" />}

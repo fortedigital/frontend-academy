@@ -29,18 +29,10 @@ const questionsAndAnswers: QA[] = [
   },
 ];
 
-const QuestionText = ({ children }: { children: string }) => (
-  <h2 className="mb-2 text-lg font-bold text-red-300">{children}</h2>
-);
-
-const AnswerText = ({ children }: { children: string }) => (
-  <p className="">{children}</p>
-);
-
 const QABlock = ({ item }: { item: QA }) => (
   <div className="py-6 first:pt-0 last:pb-0">
-    <QuestionText>{item.question}</QuestionText>
-    <AnswerText>{item.answer}</AnswerText>
+    <h2 className="mb-2 text-lg font-bold text-red-300">{item.question}</h2>
+    <p>{item.answer}</p>
   </div>
 );
 

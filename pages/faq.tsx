@@ -11,11 +11,8 @@ type QA = {
 const questionsAndAnswers: QA[] = [
   {
     question: "Når skal akademiet holdes? Konkret tidspunkt.",
-    answer: "Svar",
-  },
-  {
-    question: "Hva skal man lære?",
-    answer: "Svar",
+    answer:
+      "Oppstart er 2. februar. Akademiet holdes i faggruppetiden der vi kjører vanlig faggruppesamling hver 3. gang. Se egen oversikt",
   },
   {
     question: "Hva slags forkunnskaper må man ha?",
@@ -26,6 +23,12 @@ const questionsAndAnswers: QA[] = [
     question: "Går det utover fagtimer?",
     answer:
       "Akademiet tar over for frontend-faggruppa de dagene det skal være sesjoner, så det skal være timeførbart på samme måte som faggrupper er. Det blir ca. én vanlig faggruppe per to akademisesjoner.",
+  },
+  {
+    question:
+      "Jeg er ikke påmeldt Frontend Academy. Kan jeg delta på opplegget?",
+    answer:
+      "Ja, dette er et tilbud for alle. Påmeldingen er for de som ønsker å delta på en avsluttende oppgave, som er nødvendig for å få godkjent gjennomføring av Frontend Academy.",
   },
 ];
 

@@ -38,7 +38,7 @@ function Header() {
 
   const links = (
     <>
-      <HeaderLink href="/plan">Plan</HeaderLink>
+      <HeaderLink href="/tidsplan">Tidsplan</HeaderLink>
       <HeaderLink href="/faq">FAQ</HeaderLink>
       {/* <HeaderLink href="/pamelding">Påmelding</HeaderLink> */}
       {/* <HeaderLink href="/ressurser">Ressurser</HeaderLink> */}

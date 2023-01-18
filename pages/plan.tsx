@@ -2,7 +2,7 @@ export default function Plan() {
   const planData = [
     {
       date: "02. februar 2023",
-      topic: "Introduksjon",
+      topic: "Introduksjon med felles middag i kantinen etterpå.",
     },
     {
       date: "16. februar 2023",

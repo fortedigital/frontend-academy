@@ -20,28 +20,12 @@ export default function Home() {
           <EmphasizedText>konsulentvirksomhet</EmphasizedText>?
           <br />
           <br />
-          Meld deg på Forte Frontend Academy, der vi utover våren arrangerer 8
+          Bli med på Forte Frontend Academy, der vi utover våren arrangerer 8
           ettermiddager med kurs, workshops og gruppeoppgaver. Sesjonene vil
           være innenfor arbeidstid, og oppstart er 02. februar 2023.
         </p>
-        <a
-          href="https://forms.office.com/Pages/ResponsePage.aspx?id=nv06Bstf0kinacoxsPW0Qyz1_fHV7sxIpo8188t8HX5UOEZHRFRBMEg0S1VERTY4OUtWTzhFRlZIQyQlQCN0PWcu"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button
-            className="group"
-            icon={
-              <Icon
-                name="ArrowRightIcon"
-                className="transition-transform group-hover:translate-x-2"
-              />
-            }
-            iconPosition="end"
-          >
-            Meld deg på
-          </Button>
-        </a>
+
+       
       </div>
     </div>
   );

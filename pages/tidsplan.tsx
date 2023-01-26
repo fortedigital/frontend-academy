@@ -26,28 +26,28 @@ export default function Plan() {
       topic: "Kvalitetssikring på høyt nivå",
     },
     {
-      date: "april (TBA)",
+      date: "30. mars",
       topic: "Universell utforming v. Kristoffer Lium (NRK)",
     },
     {
-      date: "april (TBA)",
+      date: "13. april",
       topic: "Faggruppesamling",
     },
     {
-      date: "mai (TBA)",
+      date: "27. april",
       topic: "Sikkerhet",
     },
     {
-      date: "mai (TBA)",
+      date: "mai (TBD)",
       topic: "Autentisering",
       details: "Etter arbeidstid med sosialt",
     },
     {
-      date: "mai (TBA)",
+      date: "11. mai",
       topic: "TBA",
     },
     {
-      date: "juni (TBA)",
+      date: "25. mai",
       topic: "Faggruppesamling",
     },
     {

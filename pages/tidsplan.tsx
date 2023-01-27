@@ -11,7 +11,7 @@ export default function Plan() {
     {
       date: "02. februar",
       topic: "Introduksjon",
-      details: "Felles middag i kantina",
+      details: "Rom 103. Felles middag i kantina.",
     },
     {
       date: "16. februar",
@@ -90,7 +90,7 @@ export default function Plan() {
             >
               <td className="py-4 pl-4 lg:pr-20">{item.date}</td>
               <td className="py-4 pl-4 lg:pr-20">{item.topic}</td>
-              <td className="py-4 pl-4 font-bold text-zinc-300 lg:pr-20">
+              <td className="py-4 pl-4 text-zinc-200 lg:pr-20">
                 {item.details}
               </td>
             </tr>

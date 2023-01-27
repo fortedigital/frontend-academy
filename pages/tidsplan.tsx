@@ -38,7 +38,7 @@ export default function Plan() {
       topic: "Sikkerhet",
     },
     {
-      date: "mai (TBD)",
+      date: "mai (TBA)",
       topic: "Autentisering",
       details: "Etter arbeidstid med sosialt",
     },

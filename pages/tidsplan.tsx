@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 
 import Button from "components/Button";
 import Icon from "components/Icon";
@@ -58,6 +59,9 @@ export default function Plan() {
 
   return (
     <div>
+      <Head>
+        <title>Tidsplan</title>
+      </Head>
       <Link href="/" className="block max-w-fit">
         <Button
           variant="ghost"

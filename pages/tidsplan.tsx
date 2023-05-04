@@ -43,13 +43,13 @@ export default function Plan() {
       topic: "VS Code: tips og triks",
     },
     {
+      date: "25. mai",
+      topic: "Faggruppesamling",
+    },
+    {
       date: "31. mai",
       topic: "Autentisering",
       details: "Etter arbeidstid med sosialt",
-    },
-    {
-      date: "25. mai",
-      topic: "Faggruppesamling",
     },
     {
       date: "juni (TBA)",

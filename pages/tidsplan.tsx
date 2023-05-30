@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 
 import Button from "components/Button";
 import Icon from "components/Icon";
@@ -11,7 +12,7 @@ export default function Plan() {
     {
       date: "02. februar",
       topic: "Introduksjon",
-      details: "Felles middag i kantina",
+      details: "Rom 103. Felles middag i kantina.",
     },
     {
       date: "16. februar",
@@ -26,29 +27,29 @@ export default function Plan() {
       topic: "Kvalitetssikring på høyt nivå",
     },
     {
-      date: "april (TBA)",
+      date: "30. mars",
       topic: "Universell utforming v. Kristoffer Lium (NRK)",
     },
     {
-      date: "april (TBA)",
+      date: "13. april",
       topic: "Faggruppesamling",
     },
     {
-      date: "mai (TBA)",
+      date: "27. april",
       topic: "Sikkerhet",
     },
     {
-      date: "mai (TBA)",
+      date: "11. mai",
+      topic: "VS Code: tips og triks",
+    },
+    {
+      date: "25. mai",
+      topic: "Faggruppesamling",
+    },
+    {
+      date: "31. mai",
       topic: "Autentisering",
       details: "Etter arbeidstid med sosialt",
-    },
-    {
-      date: "mai (TBA)",
-      topic: "TBA",
-    },
-    {
-      date: "juni (TBA)",
-      topic: "Faggruppesamling",
     },
     {
       date: "juni (TBA)",
@@ -58,6 +59,9 @@ export default function Plan() {
 
   return (
     <div>
+      <Head>
+        <title>Tidsplan</title>
+      </Head>
       <Link href="/" className="block max-w-fit">
         <Button
           variant="ghost"
@@ -90,7 +94,7 @@ export default function Plan() {
             >
               <td className="py-4 pl-4 lg:pr-20">{item.date}</td>
               <td className="py-4 pl-4 lg:pr-20">{item.topic}</td>
-              <td className="py-4 pl-4 font-bold text-zinc-300 lg:pr-20">
+              <td className="py-4 pl-4 text-zinc-200 lg:pr-20">
                 {item.details}
               </td>
             </tr>

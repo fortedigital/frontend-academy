@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import Button from "components/Button";
 import Icon from "components/Icon";
+import Head from "next/head";
 
 type QA = {
   question: string;
@@ -25,8 +26,7 @@ const questionsAndAnswers: QA[] = [
       "Akademiet tar over for frontend-faggruppa de dagene det skal være sesjoner, så det skal være timeførbart på samme måte som faggrupper er.",
   },
   {
-    question:
-      "Når er påmeldingsfristen?",
+    question: "Når er påmeldingsfristen?",
     answer:
       "Det har vært stor interesse for akademiet, så vi tar dessverre ikke imot flere påmeldinger.",
   },
@@ -42,6 +42,9 @@ const QABlock = ({ item }: { item: QA }) => (
 export default function FAQ() {
   return (
     <div>
+      <Head>
+        <title>FAQ</title>
+      </Head>
       <Link href="/" className="block max-w-fit">
         <Button
           variant="ghost"

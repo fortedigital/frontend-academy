@@ -1,5 +1,4 @@
-import Icon from "components/Icon";
-import Button from "components/Button";
+import Head from "next/head";
 
 export default function Home() {
   const EmphasizedText = ({ children }: { children?: React.ReactNode }) => (
@@ -8,6 +7,9 @@ export default function Home() {
 
   return (
     <div className="flex h-full flex-col justify-center">
+      <Head>
+        <title>Hjem</title>
+      </Head>
       <div className="mx-auto flex max-w-3xl flex-col items-center justify-center gap-y-14">
         <h1 className="text-center text-4xl font-bold md:text-6xl">
           Velkommen til <br /> Forte Frontend Academy
@@ -24,8 +26,6 @@ export default function Home() {
           ettermiddager med kurs, workshops og gruppeoppgaver. Sesjonene vil
           være innenfor arbeidstid, og oppstart er 02. februar 2023.
         </p>
-
-       
       </div>
     </div>
   );

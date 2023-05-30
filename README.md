@@ -116,7 +116,7 @@ export default function App({
 
 Vi skal sette opp et API som krever innlogging.
 
-Opprette en ny fil `pages/api/restricted.ts` med følgende kode:
+Opprett en ny fil `pages/api/restricted.ts` med følgende kode:
 
 ```typescript
 import { getServerSession } from "next-auth/next";

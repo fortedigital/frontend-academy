@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router.js";
 import Link from "next/link";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 import forteLogo from "assets/Forte_Symbol_white.svg";
 import Image from "next/image";
 import Icon from "components/Icon";
 import SlideoverDialog from "components/SlideoverDialog";
+import Button from "components/Button/Button";
 
 interface HeaderLinkProps {
   href: string;
@@ -32,6 +34,8 @@ function Header() {
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const { data: session } = useSession();
+
   useEffect(() => {
     setMenuOpen(false);
   }, [router.asPath]);
@@ -40,8 +44,14 @@ function Header() {
     <>
       <HeaderLink href="/tidsplan">Tidsplan</HeaderLink>
       <HeaderLink href="/faq">FAQ</HeaderLink>
-      {/* <HeaderLink href="/pamelding">Påmelding</HeaderLink> */}
-      {/* <HeaderLink href="/ressurser">Ressurser</HeaderLink> */}
+      {session ? (
+        <>
+          <HeaderLink href="/user">{session.user.name}</HeaderLink>
+          <Button onClick={() => signOut({ callbackUrl: "/" })}>Logg ut</Button>
+        </>
+      ) : (
+        <Button onClick={() => signIn("azure-ad")}>Logg inn</Button>
+      )}
     </>
   );
 
@@ -50,7 +60,7 @@ function Header() {
       <div className="container mx-auto flex h-20 flex-none items-center justify-between gap-x-8 px-4">
         <Logo />
 
-        <div className="hidden gap-x-8 md:flex">{links}</div>
+        <div className="hidden items-center gap-x-8 md:flex">{links}</div>
         <button className="md:hidden" onClick={() => setMenuOpen(true)}>
           <Icon name="Bars3Icon" size="1.5em" />
         </button>

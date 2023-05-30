@@ -4,6 +4,7 @@ import Head from "next/head";
 import Button from "components/Button";
 import Icon from "components/Icon";
 import clsx from "clsx";
+import Auth from "components/Auth/Auth";
 
 export default function Plan() {
   const tableHeaders = ["Dato", "Tema", "Detaljer"];
@@ -73,34 +74,39 @@ export default function Plan() {
         </Button>
       </Link>
       <h1 className="mb-8 text-4xl font-bold">Tidsplan</h1>
-
-      <table className="">
-        <thead>
-          <tr className="border-b border-zinc-500 text-red-300">
-            {tableHeaders.map((header, index) => (
-              <th className="py-4 pl-4 text-left" key={`table-header_${index}`}>
-                {header}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody className="divide-y divide-zinc-500">
-          {planData.map((item, index) => (
-            <tr
-              className={clsx(
-                item.topic === "Faggruppesamling" && "bg-zinc-900 bg-opacity-70"
-              )}
-              key={`plan-item_${index}`}
-            >
-              <td className="py-4 pl-4 lg:pr-20">{item.date}</td>
-              <td className="py-4 pl-4 lg:pr-20">{item.topic}</td>
-              <td className="py-4 pl-4 text-zinc-200 lg:pr-20">
-                {item.details}
-              </td>
+      <Auth>
+        <table className="">
+          <thead>
+            <tr className="border-b border-zinc-500 text-red-300">
+              {tableHeaders.map((header, index) => (
+                <th
+                  className="py-4 pl-4 text-left"
+                  key={`table-header_${index}`}
+                >
+                  {header}
+                </th>
+              ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody className="divide-y divide-zinc-500">
+            {planData.map((item, index) => (
+              <tr
+                className={clsx(
+                  item.topic === "Faggruppesamling" &&
+                    "bg-zinc-900 bg-opacity-70"
+                )}
+                key={`plan-item_${index}`}
+              >
+                <td className="py-4 pl-4 lg:pr-20">{item.date}</td>
+                <td className="py-4 pl-4 lg:pr-20">{item.topic}</td>
+                <td className="py-4 pl-4 font-bold text-zinc-300 lg:pr-20">
+                  {item.details}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </Auth>
     </div>
   );
 }
